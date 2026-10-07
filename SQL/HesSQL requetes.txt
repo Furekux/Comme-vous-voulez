@@ -1,0 +1,62 @@
+/*
+SELECT * FROM Membre
+
+SELECT nom, prenom FROM Membre WHERE ville = 'Lille'
+
+SELECT nom_activite, duree_min FROM Activite WHERE duree_min > 60
+
+SELECT nom, prenom FROM Membre WHERE nom like 'M%'
+
+SELECT nom,prenom,ville FROM Membre ORDER BY ville
+
+SELECT nom_activite FROM Activite WHERE jour = 'Lundi'
+
+SELECT count(*) FROM Membre
+
+SELECT Activite.nom_activite, Inscription.id_activite, count(Inscription.id_activite) AS 'nb_inscription'
+FROM Inscription 
+INNER JOIN Activite ON Activite.id_activite = Inscription.id_activite
+GROUP BY Activite.nom_activite
+
+SELECT avg(duree_min) FROM Activite AS 'Moyenne_duree'
+
+SELECT Coach.nom, count(Activite.nom_activite) AS 'nb_activite'
+FROM Coach 
+INNER JOIN Activite ON Activite.id_coach = Coach.id_coach
+GROUP BY Coach.id_coach
+
+SELECT Activite.nom_activite, Coach.nom FROM Activite
+INNER JOIN Coach ON Coach.id_coach = Activite.id_coach
+
+SELECT Membre.nom, Membre.prenom, count(Inscription.id_activite) AS 'nb_activite'
+FROM Membre
+INNER JOIN Inscription ON Inscription.id_membre = Membre.id_membre
+GROUP BY Inscription.id_membre
+
+SELECT Coach.nom, count(Activite.nom_activite) AS 'nb_activite'
+FROM Coach 
+INNER JOIN Activite ON Activite.id_coach = Coach.id_coach
+GROUP BY Coach.id_coach
+HAVING nb_activite > 1
+
+SELECT nom, prenom, date_naissance FROM Membre WHERE date_naissance > '2008-01-01'
+
+INSERT INTO Inscription VALUES('I16', 'M1', 'A8', '2026-09-10')
+
+UPDATE Membre
+SET ville = 'Lens'
+WHERE id_membre = 'M5'
+
+SELECT Membre.nom, Activite.nom_activite
+FROM Membre 
+INNER JOIN Inscription ON Inscription.id_membre = Membre.id_membre
+INNER JOIN Activite ON Inscription.id_activite = Activite.id_activite
+INNER JOIN Coach ON Activite.id_coach = Coach.id_coach
+WHERE Coach.nom = 'Fontaine'
+*/
+SELECT Activite.nom_activite, count(Inscription.id_activite) AS 'nb_inscription'
+FROM Inscription 
+INNER JOIN Activite ON Activite.id_activite = Inscription.id_activite
+GROUP BY Activite.nom_activite
+HAVING nb_inscription > 1
+ORDER BY nb_inscription

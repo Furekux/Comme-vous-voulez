@@ -1,0 +1,39 @@
+INSERT INTO Auteur VALUES (1, 'Verne', 'Jules', 'Française');
+INSERT INTO Auteur VALUES (2, 'Christie', 'Agatha', 'Britannique');
+INSERT INTO Auteur VALUES (3, 'Werber', 'Bernard', 'Française');
+INSERT INTO Auteur VALUES (4, 'King', 'Stephen', 'Américaine');
+INSERT INTO Auteur VALUES (5, 'Rowling', 'J.K.', 'Britannique');
+INSERT INTO Auteur VALUES (6, 'Levy', 'Marc', 'Française');
+ 
+INSERT INTO Livre VALUES ('L01', 'Vingt mille lieues sous les mers', 1, 1870, 'Science-fiction', 456);
+INSERT INTO Livre VALUES ('L02', 'Voyage au centre de la Terre', 1, 1864, 'Science-fiction', 312);
+INSERT INTO Livre VALUES ('L03', 'Le Crime de l''Orient-Express', 2, 1934, 'Policier', 288);
+INSERT INTO Livre VALUES ('L04', 'Dix petits negres', 2, 1939, 'Policier', 254);
+INSERT INTO Livre VALUES ('L05', 'Les Fourmis', 3, 1991, 'Science-fiction', 328);
+INSERT INTO Livre VALUES ('L06', 'Le Pere de nos peres', 3, 1998, 'Policier', 402);
+INSERT INTO Livre VALUES ('L07', 'Ca', 4, 1986, 'Horreur', 1138);
+INSERT INTO Livre VALUES ('L08', 'Shining', 4, 1977, 'Horreur', 512);
+INSERT INTO Livre VALUES ('L09', 'Harry Potter a l''ecole des sorciers', 5, 1997, 'Fantastique', 308);
+INSERT INTO Livre VALUES ('L10', 'Harry Potter et la Chambre des secrets', 5, 1998, 'Fantastique', 368);
+INSERT INTO Livre VALUES ('L11', 'Et si c''etait vrai', 6, 2000, 'Romance', 279);
+INSERT INTO Livre VALUES ('L12', 'Elle et lui', 6, 2015, 'Romance', 297);
+ 
+INSERT INTO Adherent VALUES (1, 'Dubois', 'Emma', 'Lille', '2023-09-04');
+INSERT INTO Adherent VALUES (2, 'Bernard', 'Louis', 'Villeneuve-d''Ascq', '2023-09-04');
+INSERT INTO Adherent VALUES (3, 'Petit', 'Chloe', 'Roubaix', '2023-09-05');
+INSERT INTO Adherent VALUES (4, 'Robert', 'Nathan', 'Lille', '2024-01-10');
+INSERT INTO Adherent VALUES (5, 'Richard', 'Manon', 'Tourcoing', '2024-01-15');
+INSERT INTO Adherent VALUES (6, 'Moreau', 'Enzo', 'Villeneuve-d''Ascq', '2024-09-02');
+INSERT INTO Adherent VALUES (7, 'Simon', 'Lea', 'Lille', '2024-09-02');
+INSERT INTO Adherent VALUES (8, 'Laurent', 'Hugo', 'Roubaix', '2025-09-01');
+ 
+INSERT INTO Emprunt VALUES (1, 'L01', 1, '2025-09-10', '2025-09-24');
+INSERT INTO Emprunt VALUES (2, 'L05', 2, '2025-09-10', NULL);
+INSERT INTO Emprunt VALUES (3, 'L09', 3, '2025-09-11', '2025-09-25');
+INSERT INTO Emprunt VALUES (4, 'L07', 4, '2025-09-12', '2025-09-30');
+INSERT INTO Emprunt VALUES (5, 'L03', 1, '2025-10-01', '2025-10-15');
+INSERT INTO Emprunt VALUES (6, 'L10', 3, '2025-10-02', NULL);
+INSERT INTO Emprunt VALUES (7, 'L02', 5, '2025-10-05', '2025-10-19');
+INSERT INTO Emprunt VALUES (8, 'L11', 6, '2025-10-06', '2025-10-20');
+INSERT INTO Emprunt VALUES (9, 'L06', 2, '2025-10-10', NULL);
+INSERT INTO Emprunt VALUES (10, 'L08', 7, '2025-10-12', '2025-10-26');

@@ -1,0 +1,31 @@
+/*
+SELECT DISTINCT genre 
+FROM Livre;
+SELECT titre, nb_pages 
+FROM Livre
+ORDER BY nb_pages DESC
+LIMIT 3;
+SELECT * ,COUNT(titre)
+FROM Livre;
+SELECT * ,AVG(nb_pages)
+FROM Livre;
+SELECT genre ,COUNT(*)
+FROM Livre
+GROUP BY genre;
+SELECT genre ,COUNT(*) AS nb_livre
+FROM Livre
+GROUP BY genre
+HAVING nb_livre >=2;
+SELECT Livre.titre,Auteur.nom
+FROM Livre
+INNER JOIN Auteur ON Livre.id_auteur = Auteur.id_auteur;
+SELECT Adherent.nom,Livre.titre
+FROM Emprunt
+INNER JOIN Livre ON Emprunt.isbn = Livre.isbn
+INNER JOIN Adherent ON Emprunt.id_adherent = Adherent.id_adherent
+WHERE Emprunt.date_retour IS NULL;
+
+*/
+SELECT Auteur.nom COUNT(*)
+FROM Livre
+GROUP BY 
